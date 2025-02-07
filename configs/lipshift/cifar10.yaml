@@ -1,0 +1,39 @@
+model:
+    m_name: 'shift_vit'
+    n_div: 12
+    patch_size: 2
+    in_chans: 3
+    embed_dim: 192
+    # embed_dim: 128
+    # depths: [6, 8, 18, 6]
+    depths: [2, 2, 6, 2]
+    # depths: [10, 18, 36, 10]
+    # depths: [6, 6, 10, 6] #49M config for final results
+    heads: 3
+    drop_rate: 0.4 #0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7
+    drop_path_rate: 0.2
+    num_lc_iter: 10
+
+training:
+    batch_size: 128 #128, 256, 512, 1024, 2048
+    epochs: 500
+    warmup_epochs: 0
+    lr: 0.0005 #0.001,0.003, 0.005; 0.0001, 0.0003,0.0005
+    weight_decay: 0.01 
+    grad_clip: True
+    grad_clip_val: 3.0
+    adam: True
+    aug_ratio: 1.
+
+dataset:
+    mode: None
+    name: 'cifar10'
+    num_classes: 10
+    input_size: 32
+    seed: 2024
+
+gloro:
+    eps: 0.1411764705882353
+    min_eps: 1.0
+    max_eps: 2.0
+    loss_type: 'emma_loss'
