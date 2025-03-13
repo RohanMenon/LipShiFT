@@ -1,7 +1,7 @@
 # LipShiFT: A Certifiably Robust Shift-based Vision Transformer
 
 
-This repository provides the implementation of our certifiably robust vision transformer. The code presented here is part of a paper accepted to the ICLR 2025 Workshop (VerifAI).
+This repository provides the implementation of our certifiably robust vision transformer. The code presented here is part of a paper accepted to the ICLR 2025 Workshop ([VerifAI](https://iclr.cc/virtual/2025/workshop/23973)).
 
 The codebase is adapted from the work on LiResNet ([NeurIPS 2023](https://arxiv.org/abs/2301.12549)) and CHORD-LiResNet ([ICLR 2024](https://openreview.net/forum?id=qz3mcn99cu))
 
