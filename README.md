@@ -28,8 +28,10 @@ Now you can follow along the code and custom configs as described below:
 1. For training a model, check out our `run.sh` as a starting point. 
 2. Dive into our [configs](/configs) for additional dataset configurations.
 
-
-Our training script used to generate results reported is: `train_lipshift.py`. And for evaluation of trained checkpoints, we use  `test_script.py`.
+Relevant scripts:
+1. `train_lipshift.py`: script to train custom LipShiFT model on a specified dataset.
+2. `test_script.py`:  Evaluation of a trained checkpoint on a specified dataset. 
+3. `eval.py`: Evaluation of Empirical robustness for a trained checkpoint using AutoAttack framework.
 
 Steps to reproduce results:
 1. Update config file for LipShiFT under `/configs/lipshift` for the specific dataset.
