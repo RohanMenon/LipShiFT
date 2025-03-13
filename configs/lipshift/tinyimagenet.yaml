@@ -3,11 +3,8 @@ model:
     n_div: 12
     patch_size: 2
     in_chans: 3
-    # embed_dim: 128
     embed_dim: 96
     depths: [6, 6, 10, 6] #49M config for final results
-    # depths: [2, 2, 6, 2]
-    # depths: [10, 18, 36, 10]
     heads: 3
     drop_rate: 0.4
     drop_path_rate: 0.2

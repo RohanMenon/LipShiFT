@@ -324,7 +324,7 @@ class LipShiFT(nn.Module):
         self.head = head(self.num_features, self.num_classes, True)
 
 
-        #initialize weights and maximum power inerations per layer
+        #initialize weights and maximum power iterations per layer
         self.apply(self._init_weights)
         self.set_num_lc_iter()
 

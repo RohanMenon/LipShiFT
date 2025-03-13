@@ -62,18 +62,20 @@ def main():
     torch.manual_seed(seed)
     seed = np.random.seed(seed)
 
+    # Load dataset for model testing
     _, _, val_loader, _ = tools.data_loader(
         data_name=dataset_cfg['name'],
         batch_size=train_cfg['batch_size'] // num_gpus,
         num_classes=dataset_cfg['num_classes'],
         seed=seed)
 
+    # Initialize model
     model = models.LipShiFT(**model_cfg, **dataset_cfg)
     weights = torch.load('checkpoints_all/final/dropout/lipshift_cifar10_499.pth')
     model.load_state_dict(weights['backbone'])
 
     model = model.cuda()
-
+    # Setup for distributed processing
     model = torch.nn.parallel.DistributedDataParallel(model,
                                                       device_ids=[local_rank],
                                                       output_device=local_rank)
@@ -115,9 +117,9 @@ def main():
                                 dtype=torch.float32,
                                 device=inputs.device).clamp_min(1e-9)
     torch.distributed.all_reduce(collect_info)
-
+    
+    # Compute model metrics 
     acc_val = 100. * collect_info[1] / collect_info[2]
-
     acc_vra_val = 100. * collect_info[0] / collect_info[2]
 
     used = time.time() - t
