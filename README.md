@@ -9,10 +9,19 @@ The codebase is adapted from the work on LiResNet ([NeurIPS 2023](https://arxiv.
 ## Getting Started:
 
 ### Creating a development environment:
-Install the latest Anaconda distribution into your local/remote session and use the following command to create a viable environment using the `environment.yaml` with all the dependencies required.
-```conda env create -f environment.yml ```
+Install the latest [Anaconda distribution](https://www.anaconda.com/docs/getting-started/anaconda/install) into your local/remote session.
+
+The following command creates a viable environment using the `environment.yaml` which has all the dependencies required.
+
+```conda
+conda env create -f environment.yml
+```
+
 Now activate the environment using the following command:
-``` conda activate liresnet ``` 
+
+```conda
+conda activate lipshift
+```
 
 ### Training and Evaluation:
 Now you can follow along the code and custom configs as described below:

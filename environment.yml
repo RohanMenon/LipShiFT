@@ -1,4 +1,4 @@
-name: liresnet
+name: lipshift
 channels:
   - conda-forge
   - defaults
