@@ -57,31 +57,16 @@ To train with additional augmented data:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-<!-- ## Citations
-If you find this repository useful, consider to use the following citations
+## Citations
+If you find this repository useful, consider to use the following citation:
 
 ```
-@INPROCEEDINGS{hu2023scaling,
-    title={Unlocking Deterministic Robustness Certification on ImageNet},
-    author={Kai Hu and Andy Zou and Zifan Wang and Klas Leino and Matt Fredrikson},
-    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-    year={2023},
-    url={https://openreview.net/forum?id=SHyVaWGTO4}
+@INPROCEEDINGS{
+menon2025lipshift,
+title={LipShi{FT}: A Certifiably Robust Shift-based Vision Transformer},
+author={Rohan Menon and Nicola Franco and Stephan G{\"u}nnemann},
+booktitle={ICLR 2025 Workshop: VerifAI: AI Verification in the Wild},
+year={2025},
+url={https://openreview.net/forum?id=OfxNKIHfUA}
 }
-
-@misc{hu2023recipe,
-    title={A Recipe for Improved Certifiable Robustness: Capacity and Data}, 
-    author={Kai Hu and Klas Leino and Zifan Wang and Matt Fredrikson},
-    year={2023},
-    eprint={2310.02513},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}
-
-@INPROCEEDINGS{leino21gloro,
-    title = {Globally-Robust Neural Networks},
-    author = {Klas Leino and Zifan Wang and Matt Fredrikson},
-    booktitle = {International Conference on Machine Learning (ICML)},
-    year = {2021}
-}
-``` -->
+```
